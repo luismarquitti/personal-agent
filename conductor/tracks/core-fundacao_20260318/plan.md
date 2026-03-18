@@ -7,7 +7,7 @@
 - [x] Task: Setup PostgreSQL database connection.
     - [x] Write connection helper script.
     - [x] Write unit tests for database connection.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Environment & Foundation' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Environment & Foundation' (Protocol in workflow.md)
 
 ## Phase 2: LangGraph Core
 - [ ] Task: Implement basic LangGraph with state.
