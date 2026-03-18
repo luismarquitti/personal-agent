@@ -16,3 +16,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [x] **Track: Command Center Module (EP-02)**
 *Link: [./tracks/command-center_20260318/](./tracks/command-center_20260318/)*
+
+---
+
+- [ ] **Track: LLM Configuration & Local Setup Documentation**
+*Link: [./tracks/llm-setup_20260318/](./tracks/llm-setup_20260318/)*
