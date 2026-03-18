@@ -9,5 +9,10 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Command Center Module (EP-02)**
+- [x] **Track: Local Environment Doctor Script**
+*Link: [./tracks/infra-doctor_20260318/](./tracks/infra-doctor_20260318/)*
+
+---
+
+- [x] **Track: Command Center Module (EP-02)**
 *Link: [./tracks/command-center_20260318/](./tracks/command-center_20260318/)*
