@@ -9,7 +9,7 @@
   - **Code & Low-level Docs:** English.
 
 ## 2. Branding & Visual Identity
-- **Theme:** Modern & Glassmorphism.
+- **Theme:** Modern & Glassmorphism (or Minimalist & Functional for high-performance dashboards).
 - **Mode:** Automatic Dark/Light mode support.
 - **Design System:** Unified using `shadcn/ui` or `Radix UI`.
 - **Methodology:** Atomic Design (Atoms, Molecules, Organisms).
