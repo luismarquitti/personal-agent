@@ -1,14 +1,14 @@
 # Implementation Plan: LLM Configuration & Local Setup Documentation
 
 ## Phase 1: Core Configuration Docs
-- [ ] Task: Create Gemini API Setup Guide.
-    - [ ] Write `doc/infra/gemini-setup.md`.
-    - [ ] Include screenshots/links for Google AI Studio.
-    - [ ] Document `.env` variable requirements.
-- [ ] Task: Create Local LLM (Ollama) Setup Guide.
-    - [ ] Write `doc/infra/ollama-setup.md`.
-    - [ ] Include installation steps for Win/Mac/Linux.
-    - [ ] List recommended models for this project.
+- [x] Task: Create Gemini API Setup Guide.
+    - [x] Write `doc/infra/gemini-setup.md`.
+    - [x] Include screenshots/links for Google AI Studio.
+    - [x] Document `.env` variable requirements.
+- [x] Task: Create Local LLM (Ollama) Setup Guide.
+    - [x] Write `doc/infra/ollama-setup.md`.
+    - [x] Include installation steps for Win/Mac/Linux.
+    - [x] List recommended models for this project.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Core Docs' (Protocol in workflow.md)
 
 ## Phase 2: Integration & Examples
