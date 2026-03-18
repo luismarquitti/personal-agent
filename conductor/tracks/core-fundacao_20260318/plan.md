@@ -4,9 +4,9 @@
 - [x] Task: Configure Python environment (venv) and dependencies.
     - [x] Create `requirements.txt` with `langgraph`, `psycopg2`, `langchain-postgres`.
     - [x] Create `.env` template for database credentials.
-- [ ] Task: Setup PostgreSQL database connection.
-    - [ ] Write connection helper script.
-    - [ ] Write unit tests for database connection.
+- [x] Task: Setup PostgreSQL database connection.
+    - [x] Write connection helper script.
+    - [x] Write unit tests for database connection.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Environment & Foundation' (Protocol in workflow.md)
 
 ## Phase 2: LangGraph Core
