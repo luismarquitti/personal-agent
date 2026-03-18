@@ -10,10 +10,10 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Environment & Foundation' (Protocol in workflow.md)
 
 ## Phase 2: LangGraph Core
-- [ ] Task: Implement basic LangGraph with state.
-    - [ ] Define initial State schema.
-    - [ ] Write unit tests for state updates.
-    - [ ] Implement nodes and edges.
+- [x] Task: Implement basic LangGraph with state.
+    - [x] Define initial State schema.
+    - [x] Write unit tests for state updates.
+    - [x] Implement nodes and edges.
 - [ ] Task: Setup PostgresSaver for persistence.
     - [ ] Configure `PostgresSaver` in the graph.
     - [ ] Write unit tests to verify state persistence across restarts.
