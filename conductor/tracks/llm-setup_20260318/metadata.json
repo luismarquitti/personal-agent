@@ -1,0 +1,8 @@
+{
+  "track_id": "llm-setup_20260318",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-03-18T19:33:00Z",
+  "updated_at": "2026-03-18T19:33:00Z",
+  "description": "Implement a complete documentation and tuturials regarding the LLM configurations, and how to run it locally. The project will leverage GEMINI API and or Cloud Project to get a key to be used. The developers should be instructed on how to perform this integration with the Google Gemini LLM models."
+}
