@@ -1,0 +1,4 @@
+langgraph
+psycopg2-binary
+langchain-postgres
+python-dotenv
