@@ -1,9 +1,9 @@
 # Implementation Plan: Fundação Core & Infraestrutura (LangGraph Setup & Database)
 
 ## Phase 1: Environment & Foundation
-- [ ] Task: Configure Python environment (venv) and dependencies.
-    - [ ] Create `requirements.txt` with `langgraph`, `psycopg2`, `langchain-postgres`.
-    - [ ] Create `.env` template for database credentials.
+- [x] Task: Configure Python environment (venv) and dependencies.
+    - [x] Create `requirements.txt` with `langgraph`, `psycopg2`, `langchain-postgres`.
+    - [x] Create `.env` template for database credentials.
 - [ ] Task: Setup PostgreSQL database connection.
     - [ ] Write connection helper script.
     - [ ] Write unit tests for database connection.
