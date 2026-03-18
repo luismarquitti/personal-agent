@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Fundação Core & Infraestrutura (LangGraph Setup & Database)**
+- [x] **Track: Fundação Core & Infraestrutura (LangGraph Setup & Database)**
   *Link: [./tracks/core-fundacao_20260318/](./tracks/core-fundacao_20260318/)*

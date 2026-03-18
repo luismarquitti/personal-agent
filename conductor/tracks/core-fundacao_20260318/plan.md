@@ -17,4 +17,4 @@
 - [x] Task: Setup PostgresSaver for persistence.
     - [x] Configure `PostgresSaver` in the graph.
     - [x] Write unit tests to verify state persistence across restarts.
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: LangGraph Core' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: LangGraph Core' (Protocol in workflow.md)
