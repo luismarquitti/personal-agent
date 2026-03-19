@@ -16,12 +16,13 @@ interface PlanningState extends PlanningPayload {
   syncPlanning: (payload: PlanningPayload) => void;
 }
 
-export const usePlanningStore = create<PlanningState>((set) => ({
+export const usePlanningStore = create<PlanningState>()((set) => ({
   daily: [],
   weekly: [],
   monthly: [],
-  syncPlanning: (payload) => set((state) => ({
-    ...state,
-    ...payload,
+  syncPlanning: (payload) => set(() => ({
+    daily: payload.daily,
+    weekly: payload.weekly,
+    monthly: payload.monthly,
   })),
 }));

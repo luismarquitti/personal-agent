@@ -1,5 +1,6 @@
 import React from 'react';
-import { usePlanningStore, PlanningItem } from '../../store/usePlanningStore';
+import { usePlanningStore } from '../../store/usePlanningStore';
+import type { PlanningItem } from '../../store/usePlanningStore';
 
 const PlanningSection: React.FC<{ title: string; items: PlanningItem[]; colorClass: string }> = ({ title, items, colorClass }) => (
   <div className="flex-1 bg-black/40 backdrop-blur-md rounded-xl p-4 border border-white/10 min-w-[280px]">
