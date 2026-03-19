@@ -4,14 +4,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Pegar uma chave de encriptação do .env, ou usar uma default (não recomendado para produção)
+# Pegar uma chave de encriptação do .env
 ENCRYPTION_KEY = os.getenv("ENCRYPTION_KEY")
 if not ENCRYPTION_KEY:
-    # Se não houver chave no .env, vamos usar uma de fallback para desenvolvimento
-    # 32 url-safe base64-encoded bytes
-    ENCRYPTION_KEY = b'G-8gK4Qn4qC2K9J6G-8gK4Qn4qC2K9J6G-8gK4Qn4qA='
-    
-fernet = Fernet(ENCRYPTION_KEY)
+    raise ValueError("A variável de ambiente ENCRYPTION_KEY não está configurada.")
+
+# Fernet exige que a chave seja em bytes
+fernet = Fernet(ENCRYPTION_KEY.encode())
 
 def encrypt_data(data: str) -> str:
     """Encripta uma string."""
