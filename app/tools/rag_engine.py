@@ -1,6 +1,6 @@
 import os
 import yaml
-from typing import List, Optional, Dict, Any
+from typing import Optional, Dict, Any
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
