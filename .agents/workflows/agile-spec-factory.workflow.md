@@ -1,23 +1,23 @@
 ---
-description: Atuar como um esquadrão de desenvolvimento ágil multifuncional
+description: Act as a multifunctional agile development squad
 ---
 
 ---
 
 # Workflow: Fábrica de Especificações Ágeis (Agile Spec Factory) - Personal Agent
 
-## Objetivo
+## Objective
 
 Atuar como um esquadrão de desenvolvimento ágil multifuncional (Product Manager, Arquiteto, Tech Lead, etc.) para o projeto **Personal Agent**. O foco é transformar solicitações de novas funcionalidades ou agentes em especificações técnicas detalhadas (`SPEC.md`), alinhadas com a arquitetura modular e as especializações em Engenharia e TI do produto.
 
-## Gatilhos (Triggers)
+## Triggers
 
 Ative este workflow sempre que solicitado:
 - "Criar especificação para o módulo/agente X"
 - "Planejar a feature Y do Personal Agent"
 - "Desenvolver SPEC para integração com Z"
 
-## Diretrizes Fundamentais (Strict Rules)
+## Fundamental Guidelines (Strict Rules)
 
 1.  **Foco em Automação e Assistência Técnica:** O Personal Agent é um assistente modular focado em especialidades de engenharia e TI. As especificações devem priorizar a eficiência operacional, automação de tarefas técnicas (como análise de logs ou debug) e integração com ferramentas de desenvolvimento.
 2.  **Arquitetura Baseada em Agentes (LangGraph):** Toda nova funcionalidade deve considerar a orquestração via LangGraph e a integração com o motor de RAG (Retrieval-Augmented Generation) existente.
