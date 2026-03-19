@@ -1,8 +1,9 @@
 # Feature: Módulo Smart Home (Canvas Multimodal)
 
 **Épico:** EP-03
-**Status:** Backlog
+**Status:** In Progress
 **Criado:** 2026-03-18
+**Atualizado:** 2026-03-19
 
 ## Visão
 Prover uma interface interativa onde o usuário pode fazer upload de plantas arquitetônicas (PDF/Imagem) e receber sugestões inteligentes de posicionamento de dispositivos IoT (Zigbee/Matter) via IA multimodal.
@@ -30,7 +31,18 @@ Prover uma interface interativa onde o usuário pode fazer upload de plantas arq
 - **Quando** o usuário clica em "Exportar"
 - **Então** o sistema deve gerar um arquivo YAML compatível com o Home Assistant.
 
-## Notas Técnicas
-- Frontend: `react-konva` ou `d3.js` para o canvas interativo.
-- Backend: LangGraph com node de visão computacional (Gemini API).
+## Fora do Escopo
+- Automação real dos dispositivos físicos (apenas geração do código YAML).
+- Reconhecimento automático de dispositivos a partir de plantas genéricas sem escala clara.
+
+## Notas de Design
+- Frontend: Usar design system do projeto (`Specs_UX_UI.md`) para o container do canvas. O canvas interativo pode utilizar `react-konva` com suporte a zoom, pan e drag-and-drop.
+
+## Restrições Técnicas
+- Backend: LangGraph com node de visão computacional (Gemini API 2.5 Pro).
 - Suporte a Drag-and-Drop de componentes IoT no canvas.
+- As integrações e chamadas da API externa (Gemini) devem ser feitas via Cloud Functions/Backend, nunca pelo cliente.
+
+## Riscos LGPD
+- O upload da planta arquitetônica pode revelar informações privadas sobre a residência do usuário.
+- Mitigações: As imagens não devem ser usadas para treinar o modelo, sem armazenamento permanente na cloud caso não estritamente necessário (ou implementar deleção periódica e encriptação em repouso).

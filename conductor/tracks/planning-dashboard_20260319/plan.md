@@ -28,12 +28,12 @@ Adaptação do modelo da IA para entender quando propor atualizações de dashbo
 
 ### Tasks
 
-- [ ] Task 2.1: Atualizar o *system prompt* no Agente (LangGraph / `app/core/`) para instruí-lo a proativamente perguntar se o dashboard deve ser atualizado quando transações relacionadas a planejamento ocorrerem.
-- [ ] Task 2.2: Criar ou adaptar Tool no backend que recebe do Agente as atualizações (adicionadas ou revisadas) do planejamento e gera o output estruturado.
+- [x] Task 2.1: Atualizar o *system prompt* no Agente (LangGraph / `app/core/`) para instruí-lo a proativamente perguntar se o dashboard deve ser atualizado quando transações relacionadas a planejamento ocorrerem.
+- [x] Task 2.2: Criar ou adaptar Tool no backend que recebe do Agente as atualizações (adicionadas ou revisadas) do planejamento e gera o output estruturado.
 
 ### Verification
 
-- [ ] Agente passa a propor atualizações após interações como "Quais minhas tarefas de hoje?" ou "Adicione uma meta na semana".
+- [x] Agente passa a propor atualizações após interações como "Quais minhas tarefas de hoje?" ou "Adicione uma meta na semana".
 
 ## Phase 3: Integração/UI (WebSocket & Frontend)
 

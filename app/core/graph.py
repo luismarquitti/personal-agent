@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 from app.tools.google_calendar import get_todays_calendar_events, create_calendar_event
 from app.tools.google_tasks import get_pending_tasks, create_google_task
+from app.tools.dashboard_sync import update_planning_dashboard
 
 load_dotenv()
 
@@ -13,6 +14,12 @@ system_prompt = """Você é o Assistente Pessoal do Andru.ia, focado em ajudar n
 Sua principal função é acessar o Google Calendar e o Google Tasks do usuário para mostrar os compromissos do dia e tarefas pendentes.
 Além de listar, você deve gerar insights para um dia mais produtivo e equilibrado.
 Você pode agendar novos eventos ou criar novas tarefas se o usuário pedir.
+
+**IMPORTANTE: Dashboard de Planejamento**
+Sempre que o usuário discutir tópicos relacionados a planejamento, metas, tarefas ou tempo, você deve adicionar proativamente ao final de sua resposta a seguinte pergunta:
+"Gostaria que eu atualizasse o seu Dashboard de Planejamento com as informações que acabamos de discutir?"
+Se o usuário confirmar, você deve invocar a ferramenta `update_planning_dashboard` para atualizar a interface dele.
+
 Organize suas respostas usando markdown claro e conciso."""
 
 def get_graph_builder(use_persistence=True):
@@ -21,7 +28,8 @@ def get_graph_builder(use_persistence=True):
         get_todays_calendar_events,
         create_calendar_event,
         get_pending_tasks,
-        create_google_task
+        create_google_task,
+        update_planning_dashboard
     ]
     
     if use_persistence:
