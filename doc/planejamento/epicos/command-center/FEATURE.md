@@ -1,7 +1,7 @@
 # Feature: Integração Omnibar & LLM Chat
 
 **Épico:** EP-02 - Command Center (Web Dashboard)
-**Status:** Ready
+**Status:** Done
 **Criado:** 2026-03-18
 **Atualizado:** 2026-03-18
 

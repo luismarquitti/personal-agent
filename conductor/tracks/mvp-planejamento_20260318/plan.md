@@ -16,7 +16,7 @@ Autenticação inicial e criação do projeto Google.
 ### Tasks
 
 - [x] Task 1.1: Configurar projeto no Google Cloud Console e habilitar APIs (Calendar, Tasks).
-- [~] Task 1.2: Implementar fluxo OAuth2 no backend (`app/`) e armazenar credenciais criptografadas no PostgreSQL.
+- [x] Task 1.2: Implementar fluxo OAuth2 no backend (`app/`) e armazenar credenciais criptografadas no PostgreSQL.
 
 ### Verification
 
