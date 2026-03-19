@@ -1,14 +1,15 @@
 import json
-import ast
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from app.core.graph import compile_graph
 from app.api.auth import router as auth_router
+from app.api.v1.endpoints.knowledge import router as knowledge_router
 import asyncio
 
 app = FastAPI(title="Personal AI Core API")
 
 # Inclui rotas de Autenticação OAuth2
 app.include_router(auth_router)
+app.include_router(knowledge_router, prefix="/api/v1")
 
 # Compila o grafo globalmente
 graph = compile_graph(use_persistence=False) # Simplificado para o setup inicial
@@ -86,8 +87,10 @@ async def websocket_endpoint(websocket: WebSocket):
                             print(f"DEBUG: content_str = {repr(content_str)}")
                             
                             # Tenta json.loads primeiro (JSON padrão com aspas duplas)
+                            import json as _json
+                            import ast
                             try:
-                                output_dict = json.loads(content_str)
+                                output_dict = _json.loads(content_str)
                             except Exception:
                                 try:
                                     # fallback: ast.literal_eval para dict Python com aspas simples
