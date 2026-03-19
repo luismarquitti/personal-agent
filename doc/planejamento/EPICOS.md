@@ -9,3 +9,4 @@
 | **EP-05** | [Operations Hub (Consultoria TI)](epicos/operations/FEATURE.md) | 📋 Backlog | Gestão de orçamentos, projetos elétricos e infraestrutura física. |
 | **EP-06** | [Meta-Agente (Auto-Evolução)](epicos/meta-agente/FEATURE.md) | 📋 Backlog | Sistema de auto-melhoria e geração autônoma de componentes. |
 | **EP-07** | [MVP Planejamento Diário com IA](epicos/mvp-planejamento/FEATURE.md) | ✅ Done | Integração com Google Calendar e Tasks via chat com UI em tempo real de planejamento e insights. |
+| **EP-08** | [Base de Conhecimento RAG & Catálogos](epicos/bases-conhecimento/FEATURE.md) | 📋 Backlog | Engine RAG (Vector DB) para NBRs e gerenciamento de catálogos de hardware IoT. |

@@ -12,9 +12,10 @@
 - [ ] Tarefa 2.4: Criar prompt de sistema para identificação de zonas de interesse na planta e retorno estruturado.
 
 ## Fase 3: Integração/UI
-- [ ] Tarefa 3.1: Implementar API de posicionamento sugestivo de dispositivos e integrar a resposta (X, Y, Tipo) com o Canvas Frontend.
-- [ ] Tarefa 3.2: Criar fluxo de edição (Human-in-the-loop) para o usuário mover os ícones sugeridos renderizados na UI.
-- [ ] Tarefa 3.3: Implementar gerador de código YAML para Home Assistant a partir dos itens em tela e recurso de exportação.
+- [ ] Tarefa 3.1: **[Dependência EP-08]** Atualizar nó do Gemini no LangGraph para usar "Tool Call" consultando a RAG Engine (normas/NBR) e filtrando o Catálogo IoT pela preferência do cliente.
+- [ ] Tarefa 3.2: Implementar API de posicionamento sugestivo de dispositivos (ancorado nas normas retornadas do RAG) e integrar a resposta (X, Y, Tipo) com o Canvas Frontend.
+- [ ] Tarefa 3.3: Criar fluxo de edição (Human-in-the-loop) para o usuário mover os ícones sugeridos renderizados na UI.
+- [ ] Tarefa 3.4: Implementar gerador de código YAML para Home Assistant parametrizado com os hardwares selecionados.
 
 ## Fase 4: Testes e Polimento
 - [ ] Tarefa 4.1: Escrever testes unitários para a geração de lógica YAML.

@@ -62,6 +62,13 @@ async def websocket_endpoint(websocket: WebSocket):
                             "type": "status",
                             "content": f"Iniciando: {node_name}"
                         })
+                        
+                # Fim de execução de nó interno/ferramenta
+                elif kind == "on_tool_end":
+                    if event.get("name") == "update_planning_dashboard":
+                        tool_output = event.get("data", {}).get("output")
+                        if isinstance(tool_output, dict) and tool_output.get("type") == "DASHBOARD_UPDATE":
+                            await websocket.send_json(tool_output)
 
             # Sinaliza fim da resposta
             await websocket.send_json({"type": "end"})

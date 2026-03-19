@@ -1,5 +1,6 @@
 import { useEffect, useCallback, useRef } from 'react';
 import { useChatStore } from '../store/useChatStore';
+import { usePlanningStore } from '../store/usePlanningStore';
 
 const WS_URL = 'ws://localhost:8000/ws/chat';
 
@@ -36,6 +37,11 @@ export const useSocket = () => {
 
         case 'status':
           setAgentStatus(data.content);
+          break;
+          
+        case 'DASHBOARD_UPDATE':
+          usePlanningStore.getState().syncPlanning(data.data);
+          addMessage('assistant', '\n\n✅ *Dashboard de planejamento atualizado com sucesso.*');
           break;
 
         case 'end':
