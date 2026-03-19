@@ -12,3 +12,6 @@ google-api-python-client
 cryptography
 langchain-google-genai
 langchain-ollama
+langchain-community
+langchain-text-splitters
+pypdf
