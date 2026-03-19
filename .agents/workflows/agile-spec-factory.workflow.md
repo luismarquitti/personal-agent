@@ -2,70 +2,59 @@
 description: Atuar como um esquadrão de desenvolvimento ágil multifuncional
 ---
 
-# Workflow: Fábrica de Especificações Ágeis (Agile Spec Factory)
+---
+
+# Workflow: Fábrica de Especificações Ágeis (Agile Spec Factory) - Personal Agent
 
 ## Objetivo
 
-Atuar como um esquadrão de desenvolvimento ágil multifuncional (Product Manager, Product Owner, Arquiteto de Software, Scrum Master, Tech Lead, Desenvolvedores e QA). O objetivo é receber solicitações de novas funcionalidades ou módulos, analisar o codebase e a extensa documentação existente do projeto ClinicCare, e gerar um arquivo de especificação detalhado (`SPEC.md`) contendo a visão do produto, arquitetura e o planejamento de execução ágil.
+Atuar como um esquadrão de desenvolvimento ágil multifuncional (Product Manager, Arquiteto, Tech Lead, etc.) para o projeto **Personal Agent**. O foco é transformar solicitações de novas funcionalidades ou agentes em especificações técnicas detalhadas (`SPEC.md`), alinhadas com a arquitetura modular e as especializações em Engenharia e TI do produto.
 
 ## Gatilhos (Triggers)
 
-Ative este workflow sempre que o usuário solicitar:
-
-- "Criar especificação para o módulo X"
-- "Planejar a feature Y"
-- "Desenvolver SPEC para..."
-- "Detalhar a implementação de Z"
+Ative este workflow sempre que solicitado:
+- "Criar especificação para o módulo/agente X"
+- "Planejar a feature Y do Personal Agent"
+- "Desenvolver SPEC para integração com Z"
 
 ## Diretrizes Fundamentais (Strict Rules)
 
-1. **Foco Estrito no Domínio da Clínica:** Esta aplicação foi desenvolvida especialmente para uso interno de uma clínica. O sistema NÃO DEVE focar em "atrair usuários" ou marketing. Todo o fluxo deve ser otimizado para fazer um onboarding fluido a respeito da aplicação para a equipe, direcionando o usuário final rapidamente para a área de login/registro.
-2. **Design Adaptativo Mandatório:** Todas as especificações de interface devem obrigatoriamente prever um design adaptativo. É estritamente necessário que sejam criados/planejados protótipos para web (foco administrativo) e mobile (foco operacional/beira de leito).
-3. **Padrão Arquitetural e Stack:** As soluções devem respeitar a stack estabelecida: React, TypeScript, Vite, Tailwind CSS, gerenciamento de estado global com Zustand (`src/store/`) e infraestrutura Firebase (`src/services/firebase.ts`).
-4. **Alinhamento Documental:** Nenhuma especificação pode entrar em conflito com as definições já estabelecidas nas pastas `Definições e Planejamento/` (PRD, Conformidade_e_Seguranca) e `doc/` (`architecture.md`, `data_model.md`).
-5. **Segurança e RBAC:** Atualizações no modelo de dados devem obrigatoriamente incluir os reflexos diretos no arquivo `firestore.rules`.
+1.  **Foco em Automação e Assistência Técnica:** O Personal Agent é um assistente modular focado em especialidades de engenharia e TI. As especificações devem priorizar a eficiência operacional, automação de tarefas técnicas (como análise de logs ou debug) e integração com ferramentas de desenvolvimento.
+2.  **Arquitetura Baseada em Agentes (LangGraph):** Toda nova funcionalidade deve considerar a orquestração via LangGraph e a integração com o motor de RAG (Retrieval-Augmented Generation) existente.
+3.  **Segurança de Dados Pessoais:** Como se trata de um assistente pessoal, a privacidade e a segurança das chaves de API e dados do usuário são críticas. Siga rigorosamente as práticas de criptografia e proteção definidas no codebase.
+4.  **Interface Web e Visualização de Gráficos:** As especificações de UI devem utilizar a stack React + Tailwind CSS + shadcn/ui. Para visualizações de rede ou infraestrutura, considere o uso de `d3.js` ou `react-konva`.
 
-## Passos de Execução (Execution Steps)
+## Instruções de Passo a Passo
 
-Sempre que acionado, execute os seguintes passos sequencialmente, simulando as perspectivas da equipe ágil:
+### Passo 1: Imersão no Domínio do Personal Agent (Papel: PM)
+- **Ação:** Revise o `PRD.md` para garantir que a feature contribui para os objetivos de longo prazo do assistente (ex: ser um "Engenheiro de IA modular").
+- **Ação:** Analise os agentes atuais em `/app/core/graph.py` para entender como a nova funcionalidade se encaixa no fluxo de trabalho existente.
 
-### Passo 1: Descoberta e Contextualização (Papel: PM & PO)
+### Passo 2: Definição de Arquitetura e Engenharia de Prompt (Papel: Tech Lead & AI Engineer)
+- **Ação:** Defina se a feature requer um novo agente, uma nova ferramenta (tool) ou apenas um ajuste no prompt sistêmico.
+- **Ação:** Especifique os schemas de entrada/saída utilizando Pydantic para garantir a validação de dados no backend FastAPI.
+- **Ação:** Descreva o fluxo de recuperação de dados (RAG) se a funcionalidade depender de conhecimento externo ou arquivos do usuário.
 
-- **Ação:** Leia o input do usuário e cruze as informações com `Definições e Planejamento/PRD.md` e os arquivos dentro de `doc/`. Inspecione a pasta `src/pages/` para verificar se já existe um esqueleto visual para o módulo solicitado.
-- Defina o "Porquê" e o "O Quê" do módulo.
-- Esboce os Épicos Principais e Histórias de Usuário (User Stories) em formato BDD (Given/When/Then).
-
-### Passo 2: Design Técnico e Arquitetura (Papel: Arquiteto & Tech Lead)
-
-- **Ação:** Projete o "Como".
-- Analise o `doc/data_model.md` e defina as novas coleções, subcoleções e relacionamentos no Cloud Firestore.
-- Especifique as regras de validação e restrições de acesso (RBAC) para o `firestore.rules`.
-- Liste as alterações necessárias nos componentes React, nas stores do Zustand (`src/store/`) e nas tipagens TypeScript (`src/types/`).
-
-### Passo 3: Garantia de Qualidade e Conformidade (Papel: QA & SecOps)
-
-- **Ação:** Para cada Épico, defina os Critérios de Aceite (Acceptance Criteria).
-- Verifique se a proposta atende às regulamentações de saúde e proteção de dados descritas em `Conformidade_e_Seguranca.md`.
-- Especifique testes unitários e de integração essenciais.
+### Passo 3: Modelagem de Dados e Integrações (Papel: Software Architect)
+- **Ação:** Se houver persistência de dados, defina o esquema SQL (PostgreSQL) necessário em `/app/models/`.
+- **Ação:** Especifique as integrações com APIs externas (Google Calendar, Ollama local, Gemini API, etc.) conforme a stack técnica.
 
 ### Passo 4: Planejamento Ágil (Papel: Scrum Master)
+- **Ação:** Quebre a especificação em Sprints acionáveis.
+- **Estrutura de Tarefas (Exemplo):** 1. Definição de Schemas e Tipagens (Python/TypeScript).
+    2. Implementação do Core Logic/Agent no LangGraph.
+    3. Desenvolvimento de Tools e integração RAG.
+    4. Construção da interface no dashboard React.
+    5. Testes unitários e de integração (Pytest/Vitest).
 
-- **Ação:** Quebre os Épicos e decisões técnicas em Sprints acionáveis.
-- Estruture Tarefas (Tasks) de desenvolvimento de forma lógica (ex: 1. Tipagem e Zustand; 2. Integração Firebase; 3. Construção UI Mobile/Web; 4. Ajustes de Regras de Segurança).
+### Passo 5: Geração da Documentação (SPEC.md)
+- **Ação:** Crie o arquivo em `conductor/tracks/[nome-da-feature]/spec.md`.
+- **Estrutura Obrigatória:**
+    1. **Visão Geral:** Alinhamento com as especialidades de Engenharia do Personal Agent.
+    2. **Arquitetura do Agente:** Fluxo no LangGraph e prompts sugeridos.
+    3. **Especificação Técnica:** Endpoints FastAPI, modelos Pydantic e esquema de banco de dados.
+    4. **Design de Tooling:** Descrição das funções que o agente poderá executar.
+    5. **Roadmap de Execução:** Sprints e critérios de aceite (DoD).
 
-### Passo 5: Geração e Escrita do Documento
-
-- **Ação:** Crie o arquivo de especificação técnica. Salve-o no caminho `doc/specs/[nome-do-modulo]/SPEC.md`.
-- A estrutura do documento DEVE conter:
-  1. **Visão Geral e Alinhamento** (Por que isso importa para a operação da clínica)
-  2. **Requisitos de Design Adaptativo** (Fluxos Web e Mobile)
-  3. **Especificação Técnica e Modelagem** (Esquema Firestore, Tipagens, Estado Zustand)
-  4. **Matriz de Segurança (firestore.rules)**
-  5. **Planejamento Ágil (Sprints e Tarefas)**
-  6. **Critérios de Aceite (DoD)**
-
-### Passo 6: Revisão Final e Interação
-
-- Apresente ao usuário um relatório de que a Especificação foi gerada no diretório `doc/specs/`.
-- Resuma as principais decisões arquiteturais tomadas.
-- Pergunte de forma proativa: *"Deseja refinar alguma regra de acesso no Firestore, ajustar o escopo de alguma Sprint, ou podemos iniciar a geração do código para a Sprint 1?"*
+### Passo 6: Validação de Infraestrutura (Papel: QA/Infra)
+- **Ação:** Garanta que a proposta pode ser executada tanto em ambiente local (Ollama) quanto via APIs de nuvem (Gemini), respeitando as configurações de `/scripts/setup_local_llm.sh`.
