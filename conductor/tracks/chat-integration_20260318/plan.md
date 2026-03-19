@@ -10,12 +10,12 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Connectivity' (Protocol in workflow.md)
 
 ## Phase 2: Core Messaging & Streaming
-- [ ] Task: Refactor Omnibar for message dispatch.
-    - [ ] Integrate Omnibar with `chatStore`.
-    - [ ] Implement message sending via socket.
-- [ ] Task: Implement Streaming Message Component.
-    - [ ] Create `ChatMessage` with progressive text rendering.
-    - [ ] Handle real-time token updates from state.
+- [x] Task: Refactor Omnibar for message dispatch.
+    - [x] Integrate Omnibar with `chatStore`.
+    - [x] Implement message sending via socket.
+- [x] Task: Implement Streaming Message Component.
+    - [x] Create `ChatMessage` with progressive text rendering.
+    - [x] Handle real-time token updates from state.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Streaming Functional' (Protocol in workflow.md)
 
 ## Phase 3: UX & Feedback

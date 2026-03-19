@@ -1,26 +1,16 @@
 import { MainLayout } from './components/layout/MainLayout'
 import { Omnibar } from './components/layout/Omnibar'
 import { SystemDashboard } from './components/dashboard/SystemDashboard'
+import { ChatMessage } from './components/dashboard/ChatMessage'
 import { useChatStore } from './store/useChatStore'
-import { sendMessageToAI } from './lib/socket'
+import { useSocket } from './lib/useSocket'
 
 function App() {
-  const { messages, addMessage, updateStreamingMessage, finalizeStreamingMessage } = useChatStore()
+  const { messages } = useChatStore()
+  const { sendMessage } = useSocket()
 
   const handleSend = (message: string) => {
-    addMessage('user', message)
-    
-    // Start streaming assistant response
-    const assistantMessageId = addMessage('assistant', '')
-    
-    sendMessageToAI(message, {
-      onMessage: (content) => {
-        updateStreamingMessage(assistantMessageId, content)
-      },
-      onDone: () => {
-        finalizeStreamingMessage(assistantMessageId)
-      }
-    })
+    sendMessage(message)
   }
 
   return (
@@ -42,13 +32,12 @@ function App() {
               <p className="text-slate-400 italic text-sm">No recent interactions.</p>
             )}
             {messages.map((msg) => (
-              <div key={msg.id} className={`message ${msg.role} ${msg.isStreaming ? 'streaming' : ''}`}>
-                <div className="message-role">{msg.role === 'user' ? 'You' : 'AI'}</div>
-                <div className="message-content">
-                  {msg.content}
-                  {msg.isStreaming && <span className="streaming-dot"></span>}
-                </div>
-              </div>
+              <ChatMessage 
+                key={msg.id} 
+                role={msg.role} 
+                content={msg.content} 
+                isStreaming={msg.isStreaming} 
+              />
             ))}
           </div>
         </section>
