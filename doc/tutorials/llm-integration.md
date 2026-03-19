@@ -24,15 +24,10 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_ollama import ChatOllama
 
-def get_llm():
-    provider = os.getenv("LLM_PROVIDER", "gemini")
-    
-    if provider == "gemini":
-        return ChatGoogleGenerativeAI(model="gemini-1.5-pro")
-    elif provider == "ollama":
-        return ChatOllama(model="llama3")
-    else:
-        raise ValueError(f"Unsupported provider: {provider}")
+from app.core.llm_factory import get_llm
+
+# O sistema utiliza a factory centralizada:
+llm = get_llm()
 ```
 
 ## 2. Using LLMs in LangGraph Nodes
