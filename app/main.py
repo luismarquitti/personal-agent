@@ -27,11 +27,9 @@ async def websocket_endpoint(websocket: WebSocket):
             if not user_input:
                 continue
 
-            # Prepara o estado inicial para o grafo
+            # Prepara o estado inicial para o grafo do create_react_agent
             initial_state = {
-                "messages": [user_input],
-                "next_action": "start",
-                "context": {}
+                "messages": [("user", user_input)]
             }
 
             # Executa o grafo e faz o stream das respostas

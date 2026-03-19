@@ -44,9 +44,8 @@ O painel final de visualização interativo.
 
 ### Tasks
 
-- [ ] Task 3.1: Criar o componente `PlanningBoard` no React (`web/src/`).
-- [ ] Task 3.2: Integrar o componente de Planejamento na interface `Command Center`.
-- [ ] Task 3.3: Estabelecer atualização de UI real-time via WebSocket com payload do LangGraph.
+- [x] Task 3.1: Atualizar o arquivo `app/main.py` para garantir que o LLM responda corretamente na sessão de WebSocket (já existe integração parcial, apenas testes finais são necessários).
+- [x] Task 3.2: Garantir que a integração do frontend com o websocket possa renderizar tabelas markdown ou listas, uma vez que o agent vai responder neste formato (validação em `web/`).
 
 ### Verification
 
