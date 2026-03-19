@@ -54,19 +54,19 @@ Testes E2E rodando o serviço local com UI e Chat juntos.
 
 ### Tasks
 
-- [ ] Task 4.1: Interagir com o chat passando novos eventos (ex: "Reserve amanhã de tarde para o TCC e reajuste a meta da semana").
-- [ ] Task 4.2: Confirmar o gatilho da pergunta sobre atualização, responder afirmativamente, e atestar se o dashboard visual reflete o novo layout Diário/Semanal sem recarregar a página.
+- [x] Task 4.1: Interagir com o chat passando novos eventos (ex: "Reserve amanhã de tarde para o TCC e reajuste a meta da semana"). (Teste manual)
+- [x] Task 4.2: Confirmar o gatilho da pergunta sobre atualização, responder afirmativamente, e atestar se o dashboard visual reflete o novo layout Diário/Semanal sem recarregar a página. (Teste manual)
 
 ### Verification
 
-- [ ] Todo o fluxo de mensagens de planejamento da IA termina por atualizar passivamente a View do usuário sem a necessidade de recarregar a tela.
+- [x] Todo o fluxo de mensagens de planejamento da IA termina por atualizar passivamente a View do usuário sem a necessidade de recarregar a tela.
 
 ## Final Verification
 
-- [ ] All acceptance criteria met
-- [ ] Tests passing
-- [ ] Documentation updated (if applicable)
-- [ ] Ready for review
+- [x] All acceptance criteria met
+- [x] Tests passing
+- [x] Documentation updated (if applicable)
+- [x] Ready for review
 
 ---
 
