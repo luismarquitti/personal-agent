@@ -43,3 +43,40 @@ def get_todays_calendar_events() -> str:
         return "\n".join(output)
     except Exception as e:
         return f"Erro ao buscar o calendário: {str(e)}"
+
+from typing import Optional
+
+@tool
+def create_calendar_event(summary: str, is_all_day: bool, start_time: Optional[str] = None, end_time: Optional[str] = None) -> str:
+    """Cria um novo evento no Google Calendar principal do usuário.
+    
+    Args:
+        summary (str): Título do compromisso.
+        is_all_day (bool): True se for um evento de dia inteiro.
+        start_time (str, opcional): Data de início em ISO-8601 ex: '2026-03-18T14:00:00'. Ignorado se is_all_day for True (usa a data atual).
+        end_time (str, opcional): Data de fim em ISO-8601 ex: '2026-03-18T15:00:00'. Ignorado se is_all_day for True.
+    """
+    try:
+        creds = get_google_credentials(USER_ID)
+        service = build('calendar', 'v3', credentials=creds)
+
+        if is_all_day:
+            today_str = datetime.datetime.now().strftime('%Y-%m-%d')
+            event_body = {
+                'summary': summary,
+                'start': {'date': today_str},
+                'end': {'date': today_str}
+            }
+        else:
+            if not start_time or not end_time:
+                return "Erro: Para eventos que não são de dia inteiro, start_time e end_time são obrigatórios."
+            event_body = {
+                'summary': summary,
+                'start': {'dateTime': start_time, 'timeZone': 'UTC'},
+                'end': {'dateTime': end_time, 'timeZone': 'UTC'}
+            }
+
+        event = service.events().insert(calendarId='primary', body=event_body).execute()
+        return f"Evento '{summary}' criado com sucesso (Link: {event.get('htmlLink')})."
+    except Exception as e:
+        return f"Erro ao criar o compromisso no calendário: {str(e)}"
