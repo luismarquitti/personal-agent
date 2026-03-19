@@ -19,9 +19,9 @@
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Streaming Functional' (Protocol in workflow.md)
 
 ## Phase 3: UX & Feedback
-- [ ] Task: Implement Agent Status Indicators.
-    - [ ] Visual feedback for "thinking" and "tool execution".
-    - [ ] Auto-scroll to latest message.
-- [ ] Task: Error Handling & Reconnection.
-    - [ ] Graceful degradation on connection loss.
+- [x] Task: Implement Agent Status Indicators.
+    - [x] Visual feedback for "thinking" and "tool execution".
+    - [x] Auto-scroll to latest message.
+- [x] Task: Error Handling & Reconnection.
+    - [x] Graceful degradation on connection loss.
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: Final Polish' (Protocol in workflow.md)

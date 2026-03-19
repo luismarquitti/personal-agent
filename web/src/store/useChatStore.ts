@@ -10,14 +10,17 @@ interface Message {
 
 interface ChatState {
   messages: Message[]
+  agentStatus: string | null
   addMessage: (role: 'user' | 'assistant', content: string) => string
   updateStreamingMessage: (id: string, content: string) => void
   finalizeStreamingMessage: (id: string) => void
+  setAgentStatus: (status: string | null) => void
   clearHistory: () => void
 }
 
 export const useChatStore = create<ChatState>((set) => ({
   messages: [],
+  agentStatus: null,
   addMessage: (role, content) => {
     const id = Math.random().toString(36).substring(7)
     set((state) => ({
@@ -46,5 +49,6 @@ export const useChatStore = create<ChatState>((set) => ({
         msg.id === id ? { ...msg, isStreaming: false } : msg
       ),
     })),
+  setAgentStatus: (status) => set({ agentStatus: status }),
   clearHistory: () => set({ messages: [] }),
 }))

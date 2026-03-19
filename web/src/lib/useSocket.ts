@@ -5,7 +5,7 @@ const WS_URL = 'ws://localhost:8000/ws/chat';
 
 export const useSocket = () => {
   const socketRef = useRef<WebSocket | null>(null);
-  const { addMessage, updateStreamingMessage, finalizeStreamingMessage } = useChatStore();
+  const { addMessage, updateStreamingMessage, finalizeStreamingMessage, setAgentStatus } = useChatStore();
   const streamingIdRef = useRef<string | null>(null);
 
   const connect = useCallback(() => {
@@ -30,11 +30,11 @@ export const useSocket = () => {
           break;
 
         case 'status':
-          console.log('Agent Status:', data.content);
-          // Opcional: Adicionar mensagem de status ou log visual
+          setAgentStatus(data.content);
           break;
 
         case 'end':
+          setAgentStatus(null);
           if (streamingIdRef.current) {
             finalizeStreamingMessage(streamingIdRef.current);
             streamingIdRef.current = null;
@@ -42,6 +42,7 @@ export const useSocket = () => {
           break;
 
         case 'error':
+          setAgentStatus(null);
           console.error('WebSocket Error:', data.content);
           addMessage('assistant', `Erro: ${data.content}`);
           streamingIdRef.current = null;
