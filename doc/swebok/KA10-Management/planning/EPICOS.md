@@ -9,5 +9,5 @@
 | **EP-05** | [Operations Hub (IT Consultancy)](epics/operations/FEATURE.md) | 📋 Backlog | Budget management, electrical projects, and physical infrastructure. |
 | **EP-06** | [Meta-Agent (Self-Evolution)](epics/meta-agent/FEATURE.md) | 📋 Backlog | Self-improvement system and autonomous component generation. |
 | **EP-07** | [Daily Planning MVP with AI](epics/mvp-planning/FEATURE.md) | ✅ Done | Integration with Google Calendar and Tasks via chat with real-time planning UI and insights. |
-| **EP-08** | [RAG Knowledge Base & Catalogs](epics/knowledge-bases/FEATURE.md) | 📋 Backlog | RAG Engine (Vector DB) for technical standards (NBRs) and IoT hardware catalog management. |
-| **EP-09** | [SWEBOK v4 Governance Integration](../../specs/swebok-governance/SPEC.md) | 🔄 In Progress | Engineering governance framework (SWEBOK v4), living documentation, quality gates, and agent specialization. |
+| **EP-08** | [RAG Knowledge Base & Catalogs](epics/knowledge-bases/FEATURE.md) | ✅ Done | RAG Engine (Vector DB) for technical standards (NBRs) and IoT hardware catalog management. |
+| **EP-09** | [SWEBOK v4 Governance Integration](../../specs/swebok-governance/SPEC.md) | ✅ Done | Engineering governance framework (SWEBOK v4), living documentation, quality gates, and agent specialization. |

@@ -1,6 +1,6 @@
 # Development Plan — Personal AI Core
 
-> **Version:** 1.0  
+> **Version:** 1.1  
 > **Last Updated:** 2026-03-19  
 > **Governed by:** SWEBOK v4 — KA 10 (SE Management)
 
@@ -21,8 +21,8 @@ The Personal AI Core is a modular AI ecosystem designed to act as a professional
 | EP-05 | Operations Hub (IT Consultancy) | 📋 Backlog | Phase 3 | Budget management, electrical projects, physical infra |
 | EP-06 | Meta-Agent (Self-Evolution) | 📋 Backlog | Phase 4 | Self-improvement, autonomous component generation |
 | EP-07 | Daily Planning MVP with AI | ✅ Done | Phase 1 | Google Calendar/Tasks integration via chat with real-time planning UI |
-| EP-08 | RAG Knowledge Base & Catalogs | 📋 Backlog | Phase 2 | Vector DB for technical standards (NBRs), IoT catalog |
-| **EP-09** | **SWEBOK v4 Governance Integration** | **🔄 In Progress** | **Phase 1** | **Engineering governance framework, living documentation, quality gates** |
+| EP-08 | RAG Knowledge Base & Catalogs | ✅ Done | Phase 2 | Vector DB for technical standards (NBRs), IoT catalog |
+| **EP-09** | **SWEBOK v4 Governance Integration** | **✅ Done** | **Phase 1** | **Engineering governance framework, living documentation, quality gates** |
 
 ## 3. Sprint 3 — Integration & Retroactive Documentation ✅
 
@@ -41,10 +41,10 @@ The Personal AI Core is a modular AI ecosystem designed to act as a professional
 
 | Milestone | Target Date | Status | Dependencies |
 |-----------|-------------|--------|--------------|
-| M1: SWEBOK Foundation (Sprint 0) | 2026-03-19 | 🔄 In Progress | — |
-| M2: Governance Rules (Sprint 1) | 2026-03-20 | ⬜ Pending | M1 |
-| M3: Skills & Workflows (Sprint 2) | 2026-03-22 | ⬜ Pending | M2 |
-| M4: Retroactive Documentation (Sprint 3) | 2026-03-24 | ⬜ Pending | M3 |
+| M1: SWEBOK Foundation (Sprint 0) | 2026-03-19 | ✅ Done | — |
+| M2: Governance Rules (Sprint 1) | 2026-03-19 | ✅ Done | M1 |
+| M3: Skills & Workflows (Sprint 2) | 2026-03-19 | ✅ Done | M2 |
+| M4: Retroactive Documentation (Sprint 3) | 2026-03-19 | ✅ Done | M3 |
 
 ## 5. Risk Registry
 
@@ -59,9 +59,9 @@ The Personal AI Core is a modular AI ecosystem designed to act as a professional
 
 | ID | Description | Priority | Epic | Status |
 |----|-------------|----------|------|--------|
-| TD-01 | Existing epics lack formal SRS entries | Medium | EP-09 | Open — Sprint 3 |
-| TD-02 | No traceability matrix linking REQs to code | Medium | EP-09 | Open — Sprint 3 |
-| TD-03 | No formal threat model | High | EP-09 | Open — Sprint 3 |
+| TD-01 | Existing epics lack formal SRS entries | Medium | EP-09 | ✅ Closed |
+| TD-02 | No traceability matrix linking REQs to code | Medium | EP-09 | ✅ Closed |
+| TD-03 | No formal threat model | High | EP-09 | ✅ Closed |
 
 - **Deployment:** Implement project documentation sharing via GitHub Pages using MkDocs. Refer to [EPICOS.md](planning/EPICOS.md) and [BACKLOG.md](planning/BACKLOG.md).
 - **Workflow:** Create an automated GitHub Issue Management workflow to coordinate between Planning and Execution.

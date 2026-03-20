@@ -41,16 +41,24 @@ The Personal AI Core is a modular AI ecosystem with 6 main modules (see [PRD.md]
 | REQ-001 | The system shall provide a FastAPI backend server with WebSocket support for real-time agent communication | P0 | Implemented |
 | REQ-002 | The system shall use PostgreSQL with pgvector extension for persistent storage and vector search | P0 | Implemented |
 | REQ-003 | The system shall integrate with LangGraph for multi-agent orchestration with Human-in-the-Loop interrupts | P0 | Implemented |
-| REQ-004 | The system shall support local LLM inference via Ollama (Llama 3, Phi-3) | P1 | Backlog |
+| REQ-004 | The system shall support local LLM inference via Ollama (Llama 3, Phi-3) | P1 | Implemented |
 
 #### 2.1.2 Module: Command Center — Web Dashboard (EP-02) 🔄
 
 | ID | Requirement | Priority | Status |
 |----|------------|----------|--------|
-| REQ-010 | The system shall provide a React web application with authentication and session management | P0 | In Progress |
+| REQ-010 | The system shall provide a React web application with authentication and session management | P0 | Implemented |
 | REQ-011 | The system shall provide an Omnibar for global natural language commands | P0 | Implemented |
-| REQ-012 | The system shall display a unified intelligence feed (Command Center) with agent notifications | P1 | In Progress |
-| REQ-013 | The system shall provide a 3-layer planning dashboard (daily/weekly/monthly views) | P1 | Backlog |
+| REQ-012 | The system shall provide a unified intelligence feed (Command Center) with agent notifications | P1 | In Progress |
+| REQ-013 | The system shall provide a 3-layer planning dashboard (daily/weekly/monthly views) | P1 | Implemented |
+
+#### 2.1.3 Module: Knowledge Base & RAG (EP-08) ✅
+
+| ID | Requirement | Priority | Status |
+|----|------------|----------|--------|
+| REQ-080 | The system shall provide a vector-based knowledge base for technical standards | P0 | Implemented |
+| REQ-081 | The system shall provide a hardware catalog for IoT devices | P0 | Implemented |
+
 
 #### 2.1.3 Module: Daily Planning MVP (EP-07) ✅
 

@@ -2,15 +2,16 @@
   "id": "rag-engine_20260319",
   "title": "Base de Conhecimento RAG & Catálogos",
   "type": "feature",
-  "status": "pending",
+  "status": "done",
   "created": "2026-03-19T11:48:51Z",
-  "updated": "2026-03-19T11:48:51Z",
+  "updated": "2026-03-19T20:45:00Z",
+  "completed": "2026-03-19T20:45:00Z",
   "phases": {
     "total": 4,
-    "completed": 0
+    "completed": 4
   },
   "tasks": {
     "total": 11,
-    "completed": 0
+    "completed": 11
   }
 }
