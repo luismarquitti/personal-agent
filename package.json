@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Personal AI Core - Assistente Pessoal Modular",
   "scripts": {
+    "test:backend": "python -m pytest app/tests --cov=app --cov-report=term-missing",
+    "test:frontend": "cd web && npm test",
+    "test:frontend:coverage": "cd web && npm run test -- --coverage",
+    "test:report": "python scripts/test_report.py",
+    "test": "npm run test:backend && npm run test:frontend",
     "db:up": "docker compose up -d",
     "db:down": "docker compose down",
     "db:logs": "docker compose logs -f db",

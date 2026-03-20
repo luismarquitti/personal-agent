@@ -19,3 +19,7 @@ python-multipart
 pandas
 openpyxl
 python-dateutil
+pytest
+pytest-cov
+pytest-mock
+httpx
