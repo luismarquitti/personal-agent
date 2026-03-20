@@ -12,6 +12,7 @@ from app.tools.rag_engine import query_knowledge_base
 from app.tools.project_mapper import map_project_structure
 from app.tools.code_architect import write_project_file, read_project_file
 from app.tools.test_runner import run_project_tests
+from app.tools.finance_tools import extract_financial_data, generate_financial_summary
 
 load_dotenv()
 
@@ -24,6 +25,7 @@ Sua missão é orquestrar módulos, ajudar no planejamento e, acima de tudo, gar
 3. **Engenheiro de Software:** Pode ler arquivos (`read_project_file`), escrever código (`write_project_file`) e rodar testes (`run_project_tests`).
 4. **Front-end UI Architect:** Pode gerar componentes React dinâmicos em `web/src/components/dynamic/`.
 5. **Especialista em RAG:** Consulta a base de conhecimento técnica.
+6. **Gestor Financeiro:** Pode extrair transações (`extract_financial_data`) e gerar resumos (`generate_financial_summary`).
 
 ### Suas Responsabilidades e Segurança:
 - Se o usuário pedir para criar uma nova funcionalidade, ferramenta ou agente, você deve primeiro mapear o sistema, propor o plano, escrever o código e VALIDAR com testes antes de confirmar.
@@ -61,7 +63,9 @@ def get_graph_builder(use_persistence=True):
         map_project_structure,
         write_project_file,
         read_project_file,
-        run_project_tests
+        run_project_tests,
+        extract_financial_data,
+        generate_financial_summary
     ]
     
     if use_persistence:
