@@ -57,3 +57,8 @@ This file tracks all major tracks for the project. Each track has its own detail
 - [~] **Track: Infraestrutura de Produção e Ciclo de Deploy (v2.0)**
   *Link: [./tracks/infra-prod-deploy_20260320/](./tracks/infra-prod-deploy_20260320/)*
 
+---
+
+- [ ] **Track: Interface Gerativa - Prototype Integration (interface-gerativa_20260325)**
+*Link: [./tracks/interface-gerativa_20260325/](./tracks/interface-gerativa_20260325/)*
+
